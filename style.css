@@ -25,11 +25,17 @@ header{
 }
 .logo{
     width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .logo>div{
     width: 70%;
 }
 /* Ul li header navigation */
+.dnone{
+    display: none;       
+}
 .navigation{
     width: 50%;
     /* background-color: red; */
@@ -97,7 +103,7 @@ article>div{
 article>div>b{
     font-size: 5.5vw;
 }
-article>div>b>span{
+.grad{
     background: linear-gradient(to right,blue,#ffc3a0);
     -webkit-background-clip:text;
     -webkit-text-fill-color: transparent;
@@ -135,4 +141,146 @@ article>div>p{
 .demo:nth-child(even){
     background-color: #fff;
     color: black;
+}
+
+/* features collection */
+.features-services>h2{
+    text-align: center;
+    font-size: 3.4vw;
+    margin-bottom: 10px;
+}
+
+.features{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    padding-bottom: 10%;
+}
+.feature-collection{
+    width: 90%;
+    display: flex;
+    min-height: 400px;
+    justify-content: space-between;
+}
+.feature-collection>div{
+
+    background-image: url('./img/pexels-ketut-subiyanto-4353619.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+
+    width: 33%;
+    /* background-color: #ffc3a0; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    font-family: "gilroymedium";
+    color: #fff;
+    border-radius: 10px;
+}
+.feature-collection>div:nth-child(2){
+    background-image: url('./img/pexels-mart-production-7709216.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+}
+
+.feature-collection>div:nth-child(3){
+    background-image: url('./img/download.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-clip: content-box;
+}
+.feature-collection>div>div{
+    width: 100%;
+    background-color: #00000045;
+    padding: 10px;
+}
+
+
+
+
+/* benifite */
+.benifite>h2{
+    text-align: center;
+    font-size: 3.4vw;
+    margin-bottom: 10px;
+}
+.benefit{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.sub-benefite{
+    font-size: 1.4vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 200px;
+    min-width: 100px;
+    width: 30%;
+    margin: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+.sub-benefite>img{
+    width: 50px;
+}
+.sub-benefite:hover{
+    background-color: blue;
+    color: #fff;
+}
+
+.sub-benefite>a:hover{
+    color:#fff;
+}
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    text-align: center;
+}
+
+
+
+/* media */
+@media (max-width:980px) {
+    .navigation{
+        display: none;
+    }
+    .dnone{
+        display: block;
+        width: 30%;
+
+    }
+    .signupbutton{
+        width: 50%;
+    }
+    .signupbutton>button{
+        width: 58%;
+    font-size: 10px;
+    padding: 4px;
+    border-radius: 5px;
+    }
+    .feature-collection{
+        flex-direction: column;
+    }
+    .feature-collection>div{
+        width: 100%;
+        height: 300px;
+        margin-top: 10px;
+    }
+    .features-services>h2{
+        font-size: 8vw;
+    }
+    .benifite>h2{
+        font-size: 8vw;
+    }
 }
